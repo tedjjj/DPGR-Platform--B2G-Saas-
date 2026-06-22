@@ -1,0 +1,502 @@
+.grille-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.grille-total-card,
+.grille-criteria-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #dfe6f0;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(20, 37, 67, 0.06);
+}
+
+.grille-total-card {
+  min-height: 66px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 4px solid #c9a84c;
+}
+
+.grille-total-card span {
+  color: #202d45;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.grille-total-card strong {
+  color: #1f4a8c;
+  font-size: 42px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.grille-criteria-card {
+  padding: 16px;
+}
+
+.grille-criteria-card h2 {
+  margin: 0 0 12px;
+  color: #15223a;
+  font-size: 18px;
+  font-weight: 850;
+}
+
+.grille-criteria-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.grille-criteria-row {
+  min-height: 48px;
+  border: 1px solid #e5ebf3;
+  border-radius: 10px;
+  background: #f7f9fc;
+  padding: 8px 10px 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.grille-criteria-row span {
+  color: #27344c;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.grille-criteria-main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.formula-tag {
+  color: #5f6f85;
+  font-size: 11px;
+  font-weight: 600;
+  color: #c9a84c;
+}
+
+.points-pill {
+  min-width: 84px;
+  height: 32px;
+  border: 1px solid #d6deea;
+  border-radius: 9px;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.points-pill strong {
+  color: #1f4a8c;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.points-pill small {
+  color: #7d8899;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.grille-row-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.grille-criteria-row.is-draft input[type='text'],
+.grille-criteria-row.is-draft textarea {
+  flex: 1;
+  min-width: 0;
+  min-height: 32px;
+  border: 1px solid #d6deea;
+  border-radius: 9px;
+  background: #ffffff;
+  padding: 8px 10px;
+  color: #22304a;
+  font-size: 13px;
+  outline: none;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.grille-criteria-row.is-draft textarea:focus {
+  border-color: #1f4a8c;
+  box-shadow: 0 0 0 4px rgba(31, 74, 140, 0.1);
+}
+
+.draft-fields {
+  margin-top: 2px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.grille-criteria-row.is-draft input[type='text']:focus,
+.points-pill.is-input:focus-within {
+  border-color: #1f4a8c;
+  box-shadow: 0 0 0 4px rgba(31, 74, 140, 0.1);
+}
+
+.points-pill.is-input {
+  padding: 0 8px;
+  justify-content: space-between;
+}
+
+.points-pill.is-input input {
+  width: 38px;
+  border: none;
+  background: transparent;
+  color: #1f4a8c;
+  font-size: 14px;
+  font-weight: 900;
+  outline: none;
+}
+
+.add-critere-btn {
+  align-self: center;
+  border: 1px solid rgba(31, 74, 140, 0.15);
+  border-radius: 10px;
+  background: #eef4fb;
+  color: #1f4a8c;
+  font-size: 13px;
+  font-weight: 850;
+  cursor: pointer;
+  padding: 9px 14px;
+}
+
+.save-grille-btn {
+  width: 100%;
+  height: 44px;
+  border: none;
+  border-radius: 12px;
+  background: #173d78;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 850;
+  cursor: pointer;
+  box-shadow: 0 12px 24px rgba(23, 61, 120, 0.16);
+}
+
+.delete-critere-btn {
+  border: 1px solid #f2c7cc;
+  border-radius: 9px;
+  background: #fff1f2;
+  color: #bd2f3e;
+  font-size: 12px;
+  font-weight: 850;
+  padding: 7px 10px;
+  cursor: pointer;
+}
+
+.delete-critere-btn:disabled,
+.add-critere-btn:disabled,
+.save-grille-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.grille-feedback {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 650;
+  color: #4b5563;
+}
+
+.grille-feedback--error { color: #b91c1c; }
+.grille-feedback--success { color: #166534; }
+
+.grille-row-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.auto-badge {
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.advanced-btn {
+  background: none;
+  border: 1px dashed #cbd5e1;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.advanced-btn:hover {
+  border-color: #1f4a8c;
+  color: #1f4a8c;
+  background: #f1f5f9;
+}
+
+/* Modal Styles */
+.grille-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.grille-modal {
+  background: #ffffff;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.grille-modal h3 {
+  margin: 0 0 20px;
+  color: #0f172a;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.modal-field {
+  margin-bottom: 16px;
+}
+
+.modal-field label {
+  display: block;
+  margin-bottom: 6px;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.modal-field input,
+.modal-field textarea {
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.modal-field textarea {
+  min-height: 80px;
+  resize: vertical;
+  font-family: monospace;
+}
+
+.modal-field input:focus,
+.modal-field textarea:focus {
+  border-color: #1f4a8c;
+}
+
+.modal-field small {
+  display: block;
+  margin-top: 4px;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.cancel-modal,
+.save-modal {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancel-modal {
+  background: #f1f5f9;
+  border: none;
+  color: #475569;
+}
+
+.save-modal {
+  background: #1f4a8c;
+  border: none;
+  color: #ffffff;
+}
+
+.cancel-modal:hover { background: #e2e8f0; }
+.save-modal:hover { background: #173d78; }
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .grille-page { gap: 14px; }
+  .grille-total-card { padding: 10px 16px; min-height: 62px; }
+  .grille-total-card span { font-size: 14px; }
+  .grille-total-card strong { font-size: 40px; }
+  .grille-criteria-card { padding: 14px; }
+  .grille-criteria-card h2 { font-size: 17px; margin-bottom: 10px; }
+  .grille-criteria-list { gap: 8px; }
+  .grille-criteria-row { min-height: 46px; padding: 6px 8px 6px 10px; }
+  .grille-criteria-row span { font-size: 12px; }
+  .points-pill { min-width: 80px; height: 30px; gap: 4px; }
+  .points-pill strong { font-size: 17px; }
+  .points-pill small { font-size: 10px; }
+  .add-critere-btn { font-size: 12px; padding: 8px 12px; }
+  .save-grille-btn { height: 42px; font-size: 14px; }
+  .delete-critere-btn { font-size: 11px; padding: 6px 8px; }
+  .grille-feedback { font-size: 12px; }
+}
+
+@media (max-width: 900px) {
+  .grille-page { gap: 12px; }
+  .grille-total-card { padding: 8px 14px; min-height: 58px; }
+  .grille-total-card span { font-size: 13px; }
+  .grille-total-card strong { font-size: 38px; }
+  .grille-criteria-card { padding: 12px; }
+  .grille-criteria-card h2 { font-size: 16px; margin-bottom: 8px; }
+  .grille-criteria-list { gap: 6px; }
+  .grille-criteria-row { min-height: 44px; padding: 4px 6px 4px 8px; }
+  .grille-criteria-row span { font-size: 11px; }
+  .points-pill { min-width: 76px; height: 28px; gap: 3px; }
+  .points-pill strong { font-size: 16px; }
+  .points-pill small { font-size: 9px; }
+  .add-critere-btn { font-size: 11px; padding: 7px 10px; }
+  .save-grille-btn { height: 40px; font-size: 13px; }
+  .delete-critere-btn { font-size: 10px; padding: 5px 6px; }
+  .grille-feedback { font-size: 11px; }
+  .grille-modal { padding: 20px; max-width: 460px; }
+  .grille-modal h3 { font-size: 18px; }
+  .modal-field { margin-bottom: 14px; }
+  .modal-field label { font-size: 12px; margin-bottom: 5px; }
+  .modal-field input, .modal-field textarea { padding: 8px; font-size: 12px; }
+  .modal-field small { font-size: 10px; }
+  .modal-actions { gap: 10px; margin-top: 20px; }
+  .cancel-modal, .save-modal { padding: 8px 16px; font-size: 13px; }
+}
+
+@media (max-width: 768px) {
+  .grille-page { gap: 10px; }
+  .grille-total-card { padding: 6px 12px; min-height: 54px; }
+  .grille-total-card span { font-size: 12px; }
+  .grille-total-card strong { font-size: 36px; }
+  .grille-criteria-card { padding: 10px; }
+  .grille-criteria-card h2 { font-size: 15px; margin-bottom: 6px; }
+  .grille-criteria-list { gap: 4px; }
+  .grille-criteria-row { min-height: 42px; padding: 2px 4px 2px 6px; }
+  .grille-criteria-row span { font-size: 10px; }
+  .points-pill { min-width: 72px; height: 26px; gap: 2px; }
+  .points-pill strong { font-size: 15px; }
+  .points-pill small { font-size: 8px; }
+  .add-critere-btn { font-size: 10px; padding: 6px 8px; }
+  .save-grille-btn { height: 38px; font-size: 12px; }
+  .delete-critere-btn { font-size: 9px; padding: 4px 4px; }
+  .grille-feedback { font-size: 10px; }
+  .grille-modal { padding: 16px; max-width: 420px; }
+  .grille-modal h3 { font-size: 16px; }
+  .modal-field { margin-bottom: 12px; }
+  .modal-field label { font-size: 11px; margin-bottom: 4px; }
+  .modal-field input, .modal-field textarea { padding: 6px; font-size: 11px; }
+  .modal-field small { font-size: 9px; }
+  .modal-actions { gap: 8px; margin-top: 16px; }
+  .cancel-modal, .save-modal { padding: 6px 12px; font-size: 12px; }
+}
+
+@media (max-width: 600px) {
+  .grille-page { gap: 8px; }
+  .grille-total-card { padding: 4px 10px; min-height: 50px; }
+  .grille-total-card span { font-size: 11px; }
+  .grille-total-card strong { font-size: 34px; }
+  .grille-criteria-card { padding: 8px; }
+  .grille-criteria-card h2 { font-size: 14px; margin-bottom: 4px; }
+  .grille-criteria-list { gap: 2px; }
+  .grille-criteria-row { min-height: 40px; padding: 1px 2px 1px 4px; }
+  .grille-criteria-row span { font-size: 9px; }
+  .points-pill { min-width: 68px; height: 24px; gap: 1px; }
+  .points-pill strong { font-size: 14px; }
+  .points-pill small { font-size: 7px; }
+  .add-critere-btn { font-size: 9px; padding: 5px 6px; }
+  .save-grille-btn { height: 36px; font-size: 11px; }
+  .delete-critere-btn { font-size: 8px; padding: 3px 2px; }
+  .grille-feedback { font-size: 9px; }
+  .grille-modal { padding: 12px; max-width: 380px; }
+  .grille-modal h3 { font-size: 14px; }
+  .modal-field { margin-bottom: 10px; }
+  .modal-field label { font-size: 10px; margin-bottom: 3px; }
+  .modal-field input, .modal-field textarea { padding: 4px; font-size: 10px; }
+  .modal-field small { font-size: 8px; }
+  .modal-actions { gap: 6px; margin-top: 12px; }
+  .cancel-modal, .save-modal { padding: 4px 8px; font-size: 11px; }
+}
+
+@media (max-width: 400px) {
+  .grille-page { gap: 6px; }
+  .grille-total-card { padding: 2px 8px; min-height: 46px; }
+  .grille-total-card span { font-size: 10px; }
+  .grille-total-card strong { font-size: 32px; }
+  .grille-criteria-card { padding: 6px; }
+  .grille-criteria-card h2 { font-size: 13px; margin-bottom: 2px; }
+  .grille-criteria-list { gap: 0px; }
+  .grille-criteria-row { min-height: 38px; padding: 0px 1px 0px 2px; }
+  .grille-criteria-row span { font-size: 8px; }
+  .points-pill { min-width: 64px; height: 22px; gap: 0px; }
+  .points-pill strong { font-size: 13px; }
+  .points-pill small { font-size: 6px; }
+  .add-critere-btn { font-size: 8px; padding: 4px 4px; }
+  .save-grille-btn { height: 34px; font-size: 10px; }
+  .delete-critere-btn { font-size: 7px; padding: 2px 1px; }
+  .grille-feedback { font-size: 8px; }
+  .grille-modal { padding: 8px; max-width: 340px; }
+  .grille-modal h3 { font-size: 12px; }
+  .modal-field { margin-bottom: 8px; }
+  .modal-field label { font-size: 9px; margin-bottom: 2px; }
+  .modal-field input, .modal-field textarea { padding: 2px; font-size: 9px; }
+  .modal-field small { font-size: 7px; }
+  .modal-actions { gap: 4px; margin-top: 8px; }
+  .cancel-modal, .save-modal { padding: 2px 4px; font-size: 10px; }
+}
+
+@media (max-width: 680px) {
+  .grille-criteria-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .points-pill {
+    align-self: flex-end;
+  }
+
+  .grille-row-actions {
+    align-self: flex-end;
+  }
+}

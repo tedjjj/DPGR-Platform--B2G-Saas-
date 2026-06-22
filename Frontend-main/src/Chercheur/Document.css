@@ -1,0 +1,408 @@
+:root {
+  --text:      #1a2332;
+  --text-sub:  #6b7280;
+  --border:    #e5e7eb;
+  --bg:        #F5F7FA;
+  --white:     #ffffff;
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.07);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+  --radius:    12px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ── Validation wrapper ── */
+.validation {
+  max-width: 960px;
+  margin: 24px auto 40px;
+  padding: 32px 28px 28px;  
+  background-color: #F5F7FA;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── Header banner ── */
+.validation .header {
+  background: linear-gradient(135deg, #0A1628 0%, #1A3A6B 100%);
+  border-radius: 12px;
+  padding: 28px 24px 24px;
+  text-align: center;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.validation .header svg {
+  font-size: 32px;
+  color: #C9A84C;
+  margin-bottom: 12px;
+}
+
+.validation .header h1 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 6px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.validation .header p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* ── Etape cards ── */
+.etape1,
+.etape2,
+.etape3 {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px 22px 18px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
+  border: 1px solid #e5e7eb;
+  margin-bottom: 16px;
+}
+
+.etape1 h1,
+.etape2 h1,
+.etape3 h1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;   
+  gap: 8px;
+  font-size: 17px;
+  font-weight: 800;
+  color: #1a1f2e;
+  margin: 0 0 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #C9A84C;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.etape1 h1 svg,
+.etape2 h1 svg,
+.etape3 h1 svg {
+  color: #1A3A6B;
+  flex-shrink: 0;
+}
+
+/* ── Button group  ── */
+.etape-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.btn-modifier {
+  display: flex; align-items: center; gap: 7px;
+  background: var(--white); border: 1.5px solid var(--border);
+  border-radius: 8px; padding: 7px 15px;
+  font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500;
+  color: var(--text); cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.btn-modifier:hover {  background: var(--bg); }
+
+.btn-annuler-etape {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12.5px;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  color: #DC2626;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.15s;
+}
+
+.btn-annuler-etape:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+/* ── Lists ── */
+.etape1 ul,
+.etape2 ul,
+.etape3 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #374151;
+}
+
+.etape1 li,
+.etape2 li,
+.etape3 li {
+  padding: 6px 0;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: #1a1f2e;
+  font-weight: 500;
+}
+
+.etape3 li:last-of-type {
+  border-bottom: none;
+}
+
+.etape1 hr,
+.etape2 hr,
+.etape3 hr {
+  border: none;
+  border-top: 1px solid #f3f4f6;
+  margin: 4px 0;
+}
+
+/* ── Info rows  ── */
+.etape1 li p,
+.etape2 li p,
+.etape3 li p {
+  display: block;
+  margin: 0;
+  padding: 7px 0;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 13px;
+  color: #1a1f2e;
+  font-weight: 500;
+}
+
+.etape1 li:last-of-type p,
+.etape2 li:last-of-type p,
+.etape3 li:last-of-type p {
+  border-bottom: none;
+}
+
+/* Label */
+.spann {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(100, 116, 139, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── Document check items ── */
+.check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: 2px solid #000000;
+  margin-right: 8px;
+  position: relative;
+  background-color: #f0fdf4;
+  flex-shrink: 0;
+}
+
+.check::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background-color: #0A1628;
+}
+
+.check--missing {
+  border-color: #DC2626;
+  background-color: #fef2f2;
+}
+
+.check--missing::after {
+  background-color: #DC2626;
+}
+
+/* ── Certification checkbox ── */
+.check-val {
+  margin-top: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 16px 18px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.check-val label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1f2e;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.check-val input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #1A3A6B;
+  cursor: pointer;
+}
+
+.check-val p {
+  margin: 0;
+  font-size: 12.5px;
+  color: rgba(100, 116, 139, 1);
+  line-height: 1.5;
+}
+
+/* ── Info alert ── */
+.alert {
+  margin-top: 18px;
+  border-radius: 10px;
+  padding: 14px 16px;
+  background-color: #EEF2F8;
+  border: 1px solid #c7d2fe;
+  border-left: 4px solid #1A3A6B;
+}
+
+.alert h6 {
+  margin: 0;
+  font-size: 12.5px;
+  color: #1A3A6B;
+  line-height: 1.5;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── Button section ── */
+.button-section {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Base for all buttons in section */
+.button-section button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 13.5px;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border-color 0.18s, transform 0.12s, box-shadow 0.18s;
+  border: 1.5px solid transparent;
+  white-space: nowrap;
+}
+
+/* Retour  */
+.button-section button:first-child {
+  background-color: #ffffff;
+  border-color: #e5e7eb;
+  color: rgba(100, 116, 139, 1);
+}
+
+.button-section button:first-child:hover {
+  border-color: #1A3A6B;
+  color: #1A3A6B;
+  background-color: #EEF2F8;
+}
+
+/* Annuler tout  */
+.btn-annuler-tout {
+  background: #ffffff !important;
+  border: 1.5px solid #DC2626 !important;
+  color: #DC2626 !important;
+  border-radius: 8px !important;
+  padding: 10px 20px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  font-family: 'DM Sans', sans-serif !important;
+  cursor: pointer !important;
+  transition: background 0.18s, color 0.18s !important;
+}
+
+.btn-annuler-tout:hover {
+  background: #DC2626 !important;
+  color: #ffffff !important;
+}
+
+/* Enregistrer brouillon */
+.btn-secondary {
+  background-color: #ffffff !important;
+  border: 1.5px solid #C9A84C !important;
+  color: #C9A84C !important;
+  border-radius: 8px !important;
+  padding: 10px 20px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  font-family: 'DM Sans', sans-serif !important;
+  cursor: pointer !important;
+  transition: background 0.18s, color 0.18s !important;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(90deg, #C9A84C, #E2C06A, #C9A84C) !important;
+  color: #ffffff !important;
+  border-color: #C9A84C !important;
+}
+
+/* Soumettre  */
+.btn-primary {
+  background: linear-gradient(135deg, #1A3A6B, #0F2044) !important;
+  border-color: #1A3A6B !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  padding: 10px 24px !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  font-family: 'DM Sans', sans-serif !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  box-shadow: 0 2px 8px rgba(15, 32, 68, 0.28) !important;
+  cursor: pointer !important;
+  transition: background 0.18s, transform 0.12s, box-shadow 0.18s !important;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #0F2044, #0a1628) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 14px rgba(15, 32, 68, 0.35) !important;
+}
+
+.btn-primary:disabled {
+  opacity: 0.55 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .validation {
+    margin: 16px 12px 32px;
+    padding: 20px 16px 20px;
+  }
+
+  .button-section {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .button-section button,
+  .btn-annuler-tout,
+  .btn-secondary,
+  .btn-primary {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .etape-btn-group {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,216 @@
+/* ── Notifications Page ── */
+.notifs-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 10px 0;
+}
+
+/* ── Page header ── */
+.notifs-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.notifs-page-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.notifs-page-sub {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+.notifs-header-actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.notifs-mark-all,
+.notifs-settings-btn {
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1e3a8a;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+}
+
+.notifs-mark-all:hover,
+.notifs-settings-btn:hover {
+  text-decoration: underline;
+}
+
+/* ── Tabs ── */
+.notifs-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  background: #dde3ef;
+  padding: 5px;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.notifs-tab {
+  background: transparent;
+  border: none;
+  border-radius: 7px;
+  padding: 7px 18px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.18s;
+}
+
+.notifs-tab.active {
+  background: #1e3a8a;
+  color: #fff;
+  box-shadow: 0 1px 4px rgba(30, 58, 138, 0.25);
+}
+
+/* ── Notification List ── */
+.notifs-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Notification Card ── */
+.notif-item {
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  padding: 18px 20px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  gap: 16px !important;
+  position: relative !important;
+  margin-bottom: 12px !important;
+  transition: box-shadow 0.15s !important;
+  /* Outer border ring via box-shadow, left accent via border-left */
+  border: none !important;
+  border-left: 5px solid #e2e8f0 !important;
+  outline: 1px solid #e2e8f0 !important;
+  outline-offset: -1px !important;
+}
+
+.notif-item:hover {
+  box-shadow: 0 2px 14px rgba(30, 41, 59, 0.10) !important;
+}
+
+.notif-item.read {
+  opacity: 0.70;
+}
+
+/* colored left border — set via CSS var injected inline */
+.notif-item[data-color="warning"] { border-left-color: #f59e0b !important; }
+.notif-item[data-color="info"]    { border-left-color: #1e3a8a !important; }
+.notif-item[data-color="success"] { border-left-color: #22c55e !important; }
+.notif-item[data-color="error"]   { border-left-color: #ef4444 !important; }
+
+/* ── Icon ── */
+.notif-icon-wrap {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+/* ── Body ── */
+.notif-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.notif-title {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 5px;
+  padding-right: 28px;
+}
+
+.notif-text {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0 0 12px 0;
+}
+
+/* ── Unread Dot ── */
+.notif-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #1e3a8a;
+  border-radius: 50%;
+  position: absolute;
+  top: 18px;
+  right: 20px;
+}
+
+/* ── Footer ── */
+.notif-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notif-time-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.notif-time {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.notif-time-absolute {
+  font-size: 0.73rem;
+  color: #b8c4d4;
+  display: block;
+}
+
+.notif-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.notif-action-btn {
+  background: none;
+  border: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+}
+
+.notif-action-btn.mark   { color: #1e3a8a; }
+.notif-action-btn.delete { color: #ef4444; }
+
+.notif-action-btn:hover { opacity: 0.75; }

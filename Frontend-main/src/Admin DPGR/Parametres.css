@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:      #0A1628;
+  --navy-mid:  #152542;
+  --gold:      #C9A84C;
+  --text:      #1a2332;
+  --text-sub:  #6b7280;
+  --border:    #e5e7eb;
+  --bg:        #f0f2f5;
+  --white:     #ffffff;
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.07);
+  --radius:    12px;
+}
+
+html, body, #root {
+  height: 100%; width: 100%; overflow: hidden;
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg); color: var(--text);
+}
+
+/* ── Shell ── */
+.pm-shell { display: flex; width: 100vw; height: 100vh; overflow: hidden; }
+
+/* ── Main ── */
+.pm-main {
+  flex: 1; min-width: 0;
+  display: flex; flex-direction: column;
+  height: 100vh; overflow: hidden;
+}
+
+/* ── Header ── */
+.pm-header {
+  height: 64px; flex-shrink: 0;
+  background: #0F2044;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 28px; box-shadow: var(--shadow-sm);
+}
+.pm-header-title { font-size: 18px; font-weight: 700; color: #fff; }
+.pm-header-right  { display: flex; align-items: center; gap: 16px; }
+.pm-notif-btn {
+  position: relative; background: none; border: none; cursor: pointer;
+  color: #fff; display: flex; align-items: center; padding: 6px; outline: none;
+}
+.pm-notif-btn:hover { animation: pm-bell-ring 0.4s ease; }
+.pm-notif-badge {
+  position: absolute; top: 2px; right: 2px;
+  min-width: 16px; height: 16px;
+  background: #ef4444; color: #fff;
+  font-size: 9px; font-weight: 700;
+  border-radius: 20px; border: 1.5px solid #0F2044;
+  display: flex; align-items: center; justify-content: center; padding: 0 3px;
+}
+@keyframes pm-bell-ring {
+  0%,100% { transform: rotate(0); } 20% { transform: rotate(15deg); }
+  40% { transform: rotate(-12deg); } 60% { transform: rotate(8deg); } 80% { transform: rotate(-5deg); }
+}
+.pm-avatar {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--gold); color: #fff;
+  font-size: 13px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; cursor: pointer;
+}
+
+/* ── Body ── */
+.pm-body {
+  flex: 1; overflow-y: auto;
+  padding: 32px 28px 48px;
+  display: flex; flex-direction: column; gap: 16px;
+  max-width: 660px; width: 100%;
+  align-self: center;
+}
+.pm-body::-webkit-scrollbar { width: 5px; }
+.pm-body::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
+
+/* ── Card ── */
+.pm-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 24px 26px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ── Section header ── */
+.pm-section-header {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 22px;
+}
+.pm-section-icon {
+  width: 42px; height: 42px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.pm-section-icon--navy { background: var(--navy-mid); color: #fff; }
+.pm-section-title { font-size: 16px; font-weight: 800; color: var(--text); }
+
+/* ── Fields ── */
+.pm-fields { display: flex; flex-direction: column; gap: 16px; }
+.pm-field  { display: flex; flex-direction: column; gap: 6px; }
+.pm-label  { font-size: 13px; color: var(--text-sub); }
+.pm-input {
+  width: 100%; background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px; padding: 11px 14px;
+  font-size: 14px; font-family: 'DM Sans', sans-serif;
+  color: var(--text); outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+}
+.pm-input:focus {
+  border-color: var(--navy-mid);
+  box-shadow: 0 0 0 3px rgba(21,37,66,0.1);
+}
+.pm-input::placeholder { color: var(--text-sub); }
+
+/* ── Password button ── */
+.pm-pwd-btn {
+  width: 100%; background: #f9fafb;
+  border: 1px solid var(--border);
+  border-radius: 8px; padding: 13px;
+  font-size: 14px; font-weight: 600; font-family: 'DM Sans', sans-serif;
+  color: var(--navy-mid); cursor: pointer;
+  transition: background 0.15s;
+}
+.pm-pwd-btn:hover { background: #eff6ff; }
+
+/* ── Save button ── */
+.pm-save-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #1A3A6B, #0F2044);
+  color: #fff; border: none;
+  font-size: 15px; font-weight: 700; font-family: 'DM Sans', sans-serif;
+  padding: 16px; border-radius: 10px; cursor: pointer;
+  box-shadow: 0 4px 14px rgba(15,32,68,0.25);
+  transition: opacity 0.2s, transform 0.15s;
+}
+.pm-save-btn:hover { opacity: 0.92; transform: translateY(-1px); }
+
+.pm-logout-wrap {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 8px;
+}
+
+.mp-logout-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(239, 68, 68, 0.12);
+  color: #b91c1c;
+  padding: 12px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: background 0.18s, transform 0.18s, color 0.18s;
+}
+
+.mp-logout-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  color: #991b1b;
+  transform: translateY(-1px);
+}
+
+.mp-logout-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .pm-body { padding: 30px 26px 44px; }
+  .pm-header { padding: 0 26px; }
+  .pm-header-title { font-size: 17px; }
+  .pm-card { padding: 22px 24px; }
+  .pm-section-header { margin-bottom: 20px; }
+  .pm-section-icon { width: 40px; height: 40px; }
+  .pm-section-title { font-size: 15px; }
+  .pm-fields { gap: 14px; }
+  .pm-field { gap: 5px; }
+  .pm-label { font-size: 12px; }
+  .pm-input { padding: 10px 12px; font-size: 13px; }
+  .pm-pwd-btn { padding: 12px; font-size: 13px; }
+  .pm-save-btn { padding: 15px; font-size: 14px; }
+}
+
+@media (max-width: 900px) {
+  .pm-body { padding: 28px 24px 40px; max-width: 600px; }
+  .pm-header { padding: 0 20px; }
+  .pm-header-title { font-size: 16px; }
+  .pm-card { padding: 20px 22px; }
+  .pm-section-header { margin-bottom: 18px; }
+  .pm-section-icon { width: 38px; height: 38px; }
+  .pm-section-title { font-size: 14px; }
+  .pm-fields { gap: 12px; }
+  .pm-field { gap: 4px; }
+  .pm-label { font-size: 11.5px; }
+  .pm-input { padding: 9px 12px; font-size: 12.5px; }
+  .pm-pwd-btn { padding: 11px; font-size: 12.5px; }
+  .pm-save-btn { padding: 14px; font-size: 13px; }
+}
+
+@media (max-width: 768px) {
+  .pm-body { padding: 24px 20px 36px; max-width: 520px; }
+  .pm-header { padding: 0 16px; }
+  .pm-header-title { font-size: 15px; }
+  .pm-card { padding: 18px 20px; }
+  .pm-section-header { margin-bottom: 16px; }
+  .pm-section-icon { width: 36px; height: 36px; }
+  .pm-section-title { font-size: 13px; }
+  .pm-fields { gap: 10px; }
+  .pm-field { gap: 3px; }
+  .pm-label { font-size: 11px; }
+  .pm-input { padding: 8px 10px; font-size: 12px; }
+  .pm-pwd-btn { padding: 10px; font-size: 12px; }
+  .pm-save-btn { padding: 13px; font-size: 12px; }
+}
+
+@media (max-width: 600px) {
+  .pm-body { padding: 20px 18px 32px; max-width: 460px; }
+  .pm-header { padding: 0 12px; }
+  .pm-header-title { font-size: 14px; }
+  .pm-card { padding: 16px 18px; }
+  .pm-section-header { margin-bottom: 14px; }
+  .pm-section-icon { width: 34px; height: 34px; }
+  .pm-section-title { font-size: 12px; }
+  .pm-fields { gap: 8px; }
+  .pm-field { gap: 2px; }
+  .pm-label { font-size: 10px; }
+  .pm-input { padding: 7px 8px; font-size: 11px; }
+  .pm-pwd-btn { padding: 9px; font-size: 11px; }
+  .pm-save-btn { padding: 12px; font-size: 11px; }
+}
+
+@media (max-width: 400px) {
+  .pm-body { padding: 16px 16px 28px; max-width: 400px; }
+  .pm-header { padding: 0 10px; }
+  .pm-header-title { font-size: 13px; }
+  .pm-card { padding: 14px 16px; }
+  .pm-section-header { margin-bottom: 12px; }
+  .pm-section-icon { width: 32px; height: 32px; }
+  .pm-section-title { font-size: 11px; }
+  .pm-fields { gap: 6px; }
+  .pm-field { gap: 1px; }
+  .pm-label { font-size: 9px; }
+  .pm-input { padding: 6px 6px; font-size: 10px; }
+  .pm-pwd-btn { padding: 8px; font-size: 10px; }
+  .pm-save-btn { padding: 11px; font-size: 10px; }
+}

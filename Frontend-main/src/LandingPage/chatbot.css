@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+:root {
+  --primary: #c9a84c;
+  --primary-light: #e2c06a;
+  --dark-blue: #0a1628;
+  --mid-blue: #1a3a6b;
+  --light-blue: #0f2044;
+  --text-light: #eef2f8;
+  --text-gray: #6b7280;
+  --text-dark: #374151;
+  --bg-light: #f0f3f8;
+  --bg-white: #ffffff;
+  --border: #e5e7eb;
+  --green: #22c55e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ── Section ── */
+.chatbot-section {
+  background: linear-gradient(160deg, #eef1f8 0%, #f5f7fa 60%, #edf0f8 100%);
+  padding: 80px 32px 60px;
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+}
+
+/* ── Header ── */
+.chatbot-top {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 48px;
+  animation: fadeUp 0.7s ease both;
+}
+
+.chatbot-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: rgba(201, 168, 76, 0.12);
+  padding: 7px 16px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.chatbot-badge svg {
+  width: 13px;
+  height: 13px;
+}
+
+.chatbot-top h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--dark-blue);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.chatbot-top p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text-gray);
+  max-width: 560px;
+  margin: 0 auto 20px;
+}
+
+.header-divider {
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(to right, var(--primary), var(--primary-light));
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* ── Card ── */
+.chatbot-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--bg-white);
+  border-radius: 18px;
+  box-shadow: 0 24px 60px -8px rgba(10, 22, 40, 0.18), 0 2px 8px rgba(10, 22, 40, 0.06);
+  overflow: hidden;
+  animation: fadeUp 0.7s 0.15s ease both;
+}
+
+/* ── Card header bar ── */
+.card-header {
+  background: linear-gradient(135deg, var(--dark-blue) 0%, var(--light-blue) 60%, var(--mid-blue) 100%);
+  padding: 22px 28px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(145deg, var(--primary), var(--primary-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(201, 168, 76, 0.4);
+}
+
+.avatar svg {
+  color: var(--dark-blue);
+}
+
+.card-header-info h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.online {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: var(--green);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.25);
+}
+
+/* ── Form body ── */
+.card-body {
+  padding: 36px 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.field-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--dark-blue);
+  margin-bottom: 8px;
+}
+
+.field-label svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.field-input,
+.field-textarea {
+  width: 100%;
+  background: #f8fafc;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 13px 16px;
+  font-size: 15px;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--dark-blue);
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.field-input:focus,
+.field-textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.12);
+}
+
+.field-input::placeholder,
+.field-textarea::placeholder {
+  color: #adb5bd;
+}
+
+.field-textarea {
+  resize: vertical;
+  min-height: 140px;
+  line-height: 1.6;
+}
+
+/* ── Submit button ── */
+.submit-btn {
+  width: 100%;
+  background: linear-gradient(160deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: var(--dark-blue);
+  border: none;
+  border-radius: 10px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 16px rgba(201, 168, 76, 0.35);
+  letter-spacing: 0.2px;
+}
+
+.submit-btn:hover {
+  opacity: 0.93;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 22px rgba(201, 168, 76, 0.45);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.submit-btn svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* ── Guarantee ── */
+.guarantee {
+  text-align: center;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.guarantee svg {
+  width: 13px;
+  height: 13px;
+}
+
+/* ── FAQ section ── */
+.faq-section {
+  border-top: 1px solid var(--border);
+  padding: 20px 32px 28px;
+}
+
+.faq-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.faq-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.faq-tag {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  color: var(--text-gray);
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.faq-tag:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(201, 168, 76, 0.05);
+}
+
+/* ── Footer ── */
+.chatbot-footer {
+  max-width: 900px;
+  margin: 24px auto 0;
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  font-size: 14px;
+  color: var(--text-gray);
+  animation: fadeUp 0.7s 0.3s ease both;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.footer-item svg {
+  color: var(--green);
+  width: 17px;
+  height: 17px;
+}
+
+/* ── Animation ── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Tablet (≤768px) ── */
+@media (max-width: 768px) {
+  .chatbot-section {
+    padding: 56px 20px 48px;
+  }
+
+  .chatbot-top {
+    margin-bottom: 36px;
+  }
+
+  .chatbot-top h2 {
+    font-size: 36px;
+    line-height: 1.15;
+  }
+
+  .chatbot-top p {
+    font-size: 15px;
+  }
+
+  .chatbot-card {
+    border-radius: 14px;
+  }
+
+  .card-header {
+    padding: 18px 20px;
+  }
+
+  .card-body {
+    padding: 24px 20px 20px;
+    gap: 18px;
+  }
+
+  .faq-section {
+    padding: 16px 20px 22px;
+  }
+
+  .chatbot-footer {
+    gap: 20px;
+    font-size: 13px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* ── Mobile (≤480px) ── */
+@media (max-width: 480px) {
+  .chatbot-section {
+    padding: 40px 14px 36px;
+  }
+
+  .chatbot-top {
+    margin-bottom: 28px;
+  }
+
+  .chatbot-badge {
+    font-size: 10px;
+    padding: 6px 12px;
+    letter-spacing: 1.2px;
+  }
+
+  .chatbot-top h2 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .chatbot-top p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .chatbot-card {
+    border-radius: 12px;
+    box-shadow: 0 12px 32px -4px rgba(10, 22, 40, 0.15);
+  }
+
+  .card-header {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .avatar {
+    width: 42px;
+    height: 42px;
+  }
+
+  .card-header-info h4 {
+    font-size: 14px;
+  }
+
+  .online {
+    font-size: 12px;
+  }
+
+  .card-body {
+    padding: 20px 16px 16px;
+    gap: 16px;
+  }
+
+  .field-label {
+    font-size: 14px;
+  }
+
+  .field-input,
+  .field-textarea {
+    font-size: 14px;
+    padding: 11px 13px;
+    border-radius: 8px;
+  }
+
+  .field-textarea {
+    min-height: 110px;
+  }
+
+  .submit-btn {
+    padding: 14px;
+    font-size: 15px;
+    border-radius: 8px;
+  }
+
+  .guarantee {
+    font-size: 12px;
+  }
+
+  .faq-section {
+    padding: 14px 16px 20px;
+  }
+
+  .faq-title {
+    font-size: 12px;
+  }
+
+  .faq-tag {
+    font-size: 12px;
+    padding: 6px 11px;
+  }
+
+  .chatbot-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 13px;
+  }
+}
+.chatbot-section {
+  border-bottom: 1.5px solid #e8d9a0; /* golden divider line */
+}

@@ -1,0 +1,429 @@
+.param-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.param-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #dfe6f0;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 12px 30px rgba(20, 37, 67, 0.06);
+}
+
+.param-card h2 {
+  margin: 0 0 12px;
+  color: #15223a;
+  font-size: 18px;
+  font-weight: 850;
+}
+
+.param-title-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.param-title-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 -10px 18px rgba(0, 0, 0, 0.12);
+}
+
+.param-title-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: #ffffff;
+}
+
+.param-title-icon.is-blue { background: #1f4a8c; }
+.param-title-icon.is-gold { background: #c9a84c; }
+.param-title-icon.is-green { background: #1f9d55; }
+
+.param-warning {
+  margin: 0 0 12px;
+  background: #fff7df;
+  color: #875700;
+  border: 1px solid #f2d487;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.session-table {
+  overflow-x: auto;
+  border: 1px solid #e5ebf3;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.session-head,
+.session-row {
+  display: grid;
+  grid-template-columns: minmax(170px, 1.6fr) minmax(120px, 1fr) minmax(120px, 1fr) minmax(100px, 0.8fr) minmax(90px, 0.7fr);
+  gap: 10px;
+  align-items: center;
+  min-width: 650px;
+  padding: 10px 12px;
+}
+
+.session-head {
+  background: #f2f5fa;
+  color: #59667a;
+  font-size: 12px;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.session-row {
+  color: #303a4d;
+  border-top: 1px solid #edf1f6;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.16s ease;
+}
+
+.session-row:hover,
+.session-row.is-selected {
+  background: #f7f9fd;
+}
+
+.session-status {
+  width: fit-content;
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 850;
+  border-radius: 999px;
+  padding: 4px 9px;
+}
+
+.session-status.is-open {
+  color: #14783d;
+  background: #e7f8ee;
+}
+
+.session-status.is-closed {
+  color: #67758a;
+  background: #eef2f7;
+}
+
+.session-close-action,
+.session-close-action-btn {
+  color: #d34853;
+}
+
+.session-no-action {
+  color: #9da6b5;
+}
+
+.session-close-action-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 0;
+}
+
+.session-form-box {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #dfe6f0;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+.session-form-box label,
+.session-selector-row label,
+.delay-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #2c3850;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.session-form-box input,
+.session-selector-row select,
+.delay-grid input {
+  height: 36px;
+  border: 1px solid #d6deea;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #22304a;
+  padding: 0 10px;
+  font-size: 13px;
+  outline: none;
+}
+
+.session-form-box input:focus,
+.session-selector-row select:focus,
+.delay-grid input:focus {
+  border-color: #1f4a8c;
+  box-shadow: 0 0 0 4px rgba(31, 74, 140, 0.1);
+}
+
+.session-form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.session-cancel-btn,
+.session-save-btn,
+.session-open-btn,
+.save-mini-btn {
+  border: none;
+  border-radius: 9px;
+  height: 36px;
+  padding: 0 13px;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.session-cancel-btn {
+  background: #e9edf3;
+  color: #3a4658;
+}
+
+.session-save-btn,
+.session-open-btn,
+.save-mini-btn {
+  background: #173d78;
+  color: #ffffff;
+}
+
+.session-selector-row {
+  margin-bottom: 12px;
+}
+
+.delay-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.notif-list {
+  margin-bottom: 12px;
+}
+
+.notif-row {
+  min-height: 38px;
+  background: #f7f9fc;
+  border: 1px solid #e5ebf3;
+  border-radius: 10px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  color: #2c3850;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.notif-switch {
+  width: 38px;
+  height: 21px;
+  border: none;
+  border-radius: 999px;
+  background: #b8c1d0;
+  padding: 3px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s ease;
+  flex-shrink: 0;
+}
+
+.notif-switch span {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: block;
+  transform: translateX(0);
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(20, 37, 67, 0.2);
+}
+
+.notif-switch.is-on {
+  background: #1f9d55;
+}
+
+.notif-switch.is-on span {
+  transform: translateX(17px);
+}
+
+.notif-channel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+  color: #2c3850;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.param-feedback {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 650;
+  color: #4b5563;
+}
+
+.param-feedback--error { color: #b91c1c; }
+.param-feedback--success { color: #166534; }
+
+.param-logout-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 4px 0 12px;
+}
+
+.param-logout-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(239, 68, 68, 0.12);
+  color: #b91c1c;
+  padding: 12px 22px;
+  font-size: 14px;
+  font-weight: 800;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+.param-logout-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  color: #991b1b;
+  transform: translateY(-1px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .param-page { gap: 14px; }
+  .param-card { padding: 14px; }
+  .param-card h2 { font-size: 17px; }
+  .session-head, .session-row { padding: 9px 11px; }
+  .session-form-box { padding: 10px; }
+  .delay-grid { gap: 8px; }
+}
+
+@media (max-width: 980px) {
+  .param-page { gap: 12px; }
+  .param-card { padding: 12px; }
+  .param-card h2 { font-size: 16px; }
+  .param-title-icon { width: 28px; height: 28px; }
+  .param-title-icon svg { width: 14px; height: 14px; }
+  .param-warning { padding: 8px 10px; font-size: 12px; }
+  .session-head, .session-row { padding: 8px 10px; font-size: 12px; }
+  .delay-grid,
+  .session-form-box {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .session-form-box { padding: 8px; }
+  .session-form-box input, .session-selector-row select, .delay-grid input { height: 32px; font-size: 12px; }
+  .notif-row { padding: 6px 8px; font-size: 12px; }
+  .notif-switch { width: 34px; height: 19px; }
+  .notif-switch span { width: 13px; height: 13px; }
+  .notif-switch.is-on span { transform: translateX(15px); }
+  .notif-channel { font-size: 12px; }
+}
+
+@media (max-width: 768px) {
+  .param-page { gap: 10px; }
+  .param-card { padding: 10px; }
+  .param-card h2 { font-size: 15px; }
+  .param-title-row { gap: 8px; }
+  .param-title-icon { width: 26px; height: 26px; }
+  .param-title-icon svg { width: 13px; height: 13px; }
+  .param-warning { padding: 6px 8px; font-size: 11.5px; }
+  .session-table { border-radius: 10px; }
+  .session-head, .session-row { padding: 6px 8px; font-size: 11.5px; gap: 8px; }
+  .session-status { font-size: 10px; padding: 3px 7px; }
+  .session-form-box { padding: 6px; }
+  .session-form-box input, .session-selector-row select, .delay-grid input { height: 30px; font-size: 11.5px; padding: 0 8px; }
+  .session-cancel-btn, .session-save-btn, .session-open-btn, .save-mini-btn { height: 32px; font-size: 12px; padding: 0 10px; }
+  .notif-row { padding: 5px 7px; font-size: 11.5px; }
+  .notif-switch { width: 32px; height: 18px; }
+  .notif-switch span { width: 12px; height: 12px; }
+  .notif-switch.is-on span { transform: translateX(14px); }
+  .notif-channel { font-size: 11.5px; margin: 10px 0; }
+  .param-feedback { font-size: 12px; }
+}
+
+@media (max-width: 600px) {
+  .param-page { gap: 8px; }
+  .param-card { padding: 8px; }
+  .param-card h2 { font-size: 14px; }
+  .param-title-row { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .param-title-icon { width: 24px; height: 24px; }
+  .param-title-icon svg { width: 12px; height: 12px; }
+  .param-warning { padding: 5px 7px; font-size: 11px; }
+  .session-table { border-radius: 8px; }
+  .session-head, .session-row { padding: 5px 7px; font-size: 11px; gap: 6px; min-width: 600px; }
+  .session-status { font-size: 9px; padding: 2px 6px; }
+  .session-form-box { padding: 5px; }
+  .session-form-box input, .session-selector-row select, .delay-grid input { height: 28px; font-size: 11px; padding: 0 7px; }
+  .session-cancel-btn, .session-save-btn, .session-open-btn, .save-mini-btn { height: 30px; font-size: 11px; padding: 0 8px; }
+  .session-form-actions { gap: 6px; }
+  .notif-row { padding: 4px 6px; font-size: 11px; }
+  .notif-switch { width: 30px; height: 17px; }
+  .notif-switch span { width: 11px; height: 11px; }
+  .notif-switch.is-on span { transform: translateX(13px); }
+  .notif-channel { font-size: 11px; margin: 8px 0; }
+  .param-feedback { font-size: 11px; }
+}
+
+@media (max-width: 400px) {
+  .param-page { gap: 6px; }
+  .param-card { padding: 6px; }
+  .param-card h2 { font-size: 13px; }
+  .param-title-icon { width: 22px; height: 22px; }
+  .param-title-icon svg { width: 11px; height: 11px; }
+  .param-warning { padding: 4px 6px; font-size: 10px; }
+  .session-head, .session-row { padding: 4px 6px; font-size: 10px; gap: 5px; min-width: 550px; }
+  .session-status { font-size: 8px; padding: 2px 5px; }
+  .session-form-box { padding: 4px; }
+  .session-form-box input, .session-selector-row select, .delay-grid input { height: 26px; font-size: 10px; padding: 0 6px; }
+  .session-cancel-btn, .session-save-btn, .session-open-btn, .save-mini-btn { height: 28px; font-size: 10px; padding: 0 7px; }
+  .notif-row { padding: 3px 5px; font-size: 10px; }
+  .notif-switch { width: 28px; height: 16px; }
+  .notif-switch span { width: 10px; height: 10px; }
+  .notif-switch.is-on span { transform: translateX(12px); }
+  .notif-channel { font-size: 10px; margin: 6px 0; }
+  .param-feedback { font-size: 10px; }
+}
+
+@media (max-width: 640px) {
+  .session-form-actions {
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+
+  .session-cancel-btn,
+  .session-save-btn,
+  .session-open-btn,
+  .save-mini-btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,291 @@
+.zones-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.zone-create-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
+  gap: 12px;
+}
+
+.zone-create-row input,
+.zone-draft-row input {
+  width: 100%;
+  border: 1px solid #d6deea;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #22304a;
+  outline: none;
+}
+
+.zone-create-row input {
+  height: 40px;
+  padding: 0 12px;
+  font-size: 13px;
+}
+
+.zone-create-row input:focus,
+.zone-draft-row input:focus {
+  border-color: #1f4a8c;
+  box-shadow: 0 0 0 4px rgba(31, 74, 140, 0.1);
+}
+
+.zone-create-btn,
+.save-zones-btn {
+  border: none;
+  background: #173d78;
+  color: #ffffff;
+  font-weight: 850;
+  cursor: pointer;
+  box-shadow: 0 12px 24px rgba(23, 61, 120, 0.16);
+}
+
+.zone-create-btn {
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.zone-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #dfe6f0;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 12px 30px rgba(20, 37, 67, 0.06);
+}
+
+.zone-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.zone-card-head h2 {
+  margin: 0;
+  color: #15223a;
+  font-size: 18px;
+  font-weight: 850;
+}
+
+.zone-card-head span {
+  color: #6f7c91;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.zone-card-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.zone-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.zone-empty-tag {
+  color: #7f8ba0;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.zone-tag {
+  border: 1px solid #d8e2ef;
+  border-radius: 999px;
+  background: #eef4fb;
+  color: #244a83;
+  font-size: 12px;
+  padding: 6px 10px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.zone-tag button,
+.zone-delete-btn {
+  border: 1px solid #f2c7cc;
+  background: #fff1f2;
+  color: #bd2f3e;
+  font-size: 11px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.zone-tag button {
+  border-radius: 999px;
+  padding: 3px 7px;
+}
+
+.zone-delete-btn {
+  border-radius: 9px;
+  padding: 7px 10px;
+}
+
+.zone-tag button:disabled,
+.zone-delete-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.zone-draft-row {
+  margin-bottom: 8px;
+}
+
+.zone-draft-row input {
+  height: 34px;
+  padding: 0 10px;
+  font-size: 13px;
+}
+
+.add-country-btn {
+  width: 100%;
+  height: 36px;
+  border: 1px solid rgba(31, 74, 140, 0.15);
+  border-radius: 10px;
+  background: #eef4fb;
+  color: #1f4a8c;
+  font-size: 14px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.save-zones-btn {
+  height: 44px;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+.zone-feedback {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 650;
+  color: #4b5563;
+}
+
+.zone-feedback--error { color: #b91c1c; }
+.zone-feedback--success { color: #166534; }
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .zones-page { gap: 14px; }
+  .zone-create-row { gap: 10px; }
+  .zone-create-row input { height: 38px; font-size: 12px; padding: 0 10px; }
+  .zone-create-btn { font-size: 12px; }
+  .zone-card { padding: 14px; }
+  .zone-card-head { margin-bottom: 10px; gap: 10px; }
+  .zone-card-head h2 { font-size: 17px; }
+  .zone-card-head span { font-size: 12px; }
+  .zone-tags { gap: 6px; margin-bottom: 10px; }
+  .zone-empty-tag { font-size: 12px; }
+  .zone-tag { font-size: 11px; padding: 5px 8px; gap: 6px; }
+  .zone-tag button, .zone-delete-btn { font-size: 10px; }
+  .zone-tag button { padding: 2px 6px; }
+  .zone-delete-btn { padding: 6px 8px; }
+  .zone-draft-row { margin-bottom: 6px; }
+  .zone-draft-row input { height: 32px; font-size: 12px; padding: 0 8px; }
+  .add-country-btn { height: 34px; font-size: 13px; }
+  .save-zones-btn { height: 42px; font-size: 14px; }
+  .zone-feedback { font-size: 12px; }
+}
+
+@media (max-width: 900px) {
+  .zones-page { gap: 12px; }
+  .zone-create-row { gap: 8px; }
+  .zone-create-row input { height: 36px; font-size: 11px; padding: 0 8px; }
+  .zone-create-btn { font-size: 11px; }
+  .zone-card { padding: 12px; }
+  .zone-card-head { margin-bottom: 8px; gap: 8px; }
+  .zone-card-head h2 { font-size: 16px; }
+  .zone-card-head span { font-size: 11px; }
+  .zone-tags { gap: 4px; margin-bottom: 8px; }
+  .zone-empty-tag { font-size: 11px; }
+  .zone-tag { font-size: 10px; padding: 4px 6px; gap: 4px; }
+  .zone-tag button, .zone-delete-btn { font-size: 9px; }
+  .zone-tag button { padding: 1px 5px; }
+  .zone-delete-btn { padding: 5px 6px; }
+  .zone-draft-row { margin-bottom: 4px; }
+  .zone-draft-row input { height: 30px; font-size: 11px; padding: 0 6px; }
+  .add-country-btn { height: 32px; font-size: 12px; }
+  .save-zones-btn { height: 40px; font-size: 13px; }
+  .zone-feedback { font-size: 11px; }
+}
+
+@media (max-width: 768px) {
+  .zones-page { gap: 10px; }
+  .zone-create-row { gap: 6px; }
+  .zone-create-row input { height: 34px; font-size: 10px; padding: 0 6px; }
+  .zone-create-btn { font-size: 10px; }
+  .zone-card { padding: 10px; }
+  .zone-card-head { margin-bottom: 6px; gap: 6px; }
+  .zone-card-head h2 { font-size: 15px; }
+  .zone-card-head span { font-size: 10px; }
+  .zone-tags { gap: 2px; margin-bottom: 6px; }
+  .zone-empty-tag { font-size: 10px; }
+  .zone-tag { font-size: 9px; padding: 3px 4px; gap: 2px; }
+  .zone-tag button, .zone-delete-btn { font-size: 8px; }
+  .zone-tag button { padding: 0px 4px; }
+  .zone-delete-btn { padding: 4px 4px; }
+  .zone-draft-row { margin-bottom: 2px; }
+  .zone-draft-row input { height: 28px; font-size: 10px; padding: 0 4px; }
+  .add-country-btn { height: 30px; font-size: 11px; }
+  .save-zones-btn { height: 38px; font-size: 12px; }
+  .zone-feedback { font-size: 10px; }
+}
+
+@media (max-width: 600px) {
+  .zones-page { gap: 8px; }
+  .zone-create-row { gap: 4px; }
+  .zone-create-row input { height: 32px; font-size: 9px; padding: 0 4px; }
+  .zone-create-btn { font-size: 9px; }
+  .zone-card { padding: 8px; }
+  .zone-card-head { margin-bottom: 4px; gap: 4px; }
+  .zone-card-head h2 { font-size: 14px; }
+  .zone-card-head span { font-size: 9px; }
+  .zone-tags { gap: 0px; margin-bottom: 4px; }
+  .zone-empty-tag { font-size: 9px; }
+  .zone-tag { font-size: 8px; padding: 2px 2px; gap: 0px; }
+  .zone-tag button, .zone-delete-btn { font-size: 7px; }
+  .zone-tag button { padding: 0px 2px; }
+  .zone-delete-btn { padding: 3px 2px; }
+  .zone-draft-row { margin-bottom: 0px; }
+  .zone-draft-row input { height: 26px; font-size: 9px; padding: 0 2px; }
+  .add-country-btn { height: 28px; font-size: 10px; }
+  .save-zones-btn { height: 36px; font-size: 11px; }
+  .zone-feedback { font-size: 9px; }
+}
+
+@media (max-width: 400px) {
+  .zones-page { gap: 6px; }
+  .zone-create-row { gap: 2px; }
+  .zone-create-row input { height: 30px; font-size: 8px; padding: 0 2px; }
+  .zone-create-btn { font-size: 8px; }
+  .zone-card { padding: 6px; }
+  .zone-card-head { margin-bottom: 2px; gap: 2px; }
+  .zone-card-head h2 { font-size: 13px; }
+  .zone-card-head span { font-size: 8px; }
+  .zone-tags { gap: 0px; margin-bottom: 2px; }
+  .zone-empty-tag { font-size: 8px; }
+  .zone-tag { font-size: 7px; padding: 1px 1px; gap: 0px; }
+  .zone-tag button, .zone-delete-btn { font-size: 6px; }
+  .zone-tag button { padding: 0px 1px; }
+  .zone-delete-btn { padding: 2px 1px; }
+  .zone-draft-row { margin-bottom: 0px; }
+  .zone-draft-row input { height: 24px; font-size: 8px; padding: 0 1px; }
+  .add-country-btn { height: 26px; font-size: 9px; }
+  .save-zones-btn { height: 34px; font-size: 10px; }
+  .zone-feedback { font-size: 8px; }
+}
+
+@media (max-width: 680px) {
+  .zone-create-row {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,134 @@
+/* CTA.css */
+
+.cta-section {
+  position: relative;
+ 
+  background: linear-gradient(to bottom, #0A1628 0%, #1A3A6B 100%);
+  border-bottom: 1px solid #C9A84C;
+
+  padding: 80px 40px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Decorative subtle dots scattered in background */
+.cta-dot {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(180, 160, 100, 0.25);
+  pointer-events: none;
+}
+
+.dot-1 {
+  width: 8px;
+  height: 8px;
+  top: 35%;
+  left: 12%;
+}
+
+.dot-2 {
+  width: 6px;
+  height: 6px;
+  top: 60%;
+  left: 28%;
+}
+
+.dot-3 {
+  width: 10px;
+  height: 10px;
+  top: 30%;
+  left: 50%;
+}
+
+.dot-4 {
+  width: 7px;
+  height: 7px;
+  top: 65%;
+  left: 68%;
+}
+
+.dot-5 {
+  width: 9px;
+  height: 9px;
+  top: 40%;
+  right: 12%;
+}
+
+/* Content */
+.cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.cta-title {
+  color: #FFF;
+  text-align: center;
+  font-family: "Cormorant Garamond";
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.cta-subtitle {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* Button */
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  padding: 15px 36px;
+  background: linear-gradient(135deg, #C9A84C, #e2b84a, #C9A84C);
+  background-size: 200% auto;
+  color: #1a1a1a;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 20px rgba(200, 150, 50, 0.3);
+}
+
+.cta-btn:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(200, 150, 50, 0.45);
+}
+
+.cta-arrow {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cta-section {
+    padding: 60px 24px;
+  }
+
+  .cta-title {
+    font-size: 26px;
+  }
+
+  .cta-subtitle {
+    font-size: 14px;
+  }
+
+  .cta-btn {
+    padding: 13px 28px;
+    font-size: 14px;
+  }
+ 
+}

@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:      #0A1628;
+  --navy-mid:  #152542;
+  --gold:      #C9A84C;
+  --text:      #1a2332;
+  --text-sub:  #6b7280;
+  --border:    #e5e7eb;
+  --bg:        #f0f2f5;
+  --white:     #ffffff;
+  --green:     #16a34a;
+  --red:       #dc2626;
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.07);
+  --radius:    12px;
+}
+
+html, body, #root {
+  height: 100%; width: 100%; overflow: hidden;
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg); color: var(--text);
+}
+
+/* ── Shell ── */
+.st-shell { display: flex; width: 100vw; height: 100vh; overflow: hidden; }
+
+/* ── Main ── */
+.st-main {
+  flex: 1; min-width: 0;
+  display: flex; flex-direction: column;
+  height: 100vh; overflow: hidden;
+}
+
+/* ── Header ── */
+.st-header {
+  height: 64px; flex-shrink: 0;
+  background: #0F2044;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 28px; box-shadow: var(--shadow-sm);
+}
+.st-header-title { font-size: 18px; font-weight: 700; color: #fff; }
+.st-header-right  { display: flex; align-items: center; gap: 16px; }
+.st-notif-btn {
+  position: relative; background: none; border: none; cursor: pointer;
+  color: #fff; display: flex; align-items: center; padding: 6px; outline: none;
+}
+.st-notif-btn:hover { animation: st-bell-ring 0.4s ease; }
+.st-notif-badge {
+  position: absolute; top: 2px; right: 2px;
+  min-width: 16px; height: 16px;
+  background: #ef4444; color: #fff;
+  font-size: 9px; font-weight: 700;
+  border-radius: 20px; border: 1.5px solid #0F2044;
+  display: flex; align-items: center; justify-content: center; padding: 0 3px;
+}
+@keyframes st-bell-ring {
+  0%,100% { transform: rotate(0); } 20% { transform: rotate(15deg); }
+  40% { transform: rotate(-12deg); } 60% { transform: rotate(8deg); } 80% { transform: rotate(-5deg); }
+}
+.st-avatar {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--gold); color: #fff;
+  font-size: 13px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+}
+
+/* ── Body ── */
+.st-body {
+  flex: 1; overflow-y: auto;
+  padding: 24px 28px 40px;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.st-body::-webkit-scrollbar { width: 5px; }
+.st-body::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
+
+/* ── Stats row ── */
+.st-stats {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+}
+.st-stat-card {
+  background: var(--white); border-radius: var(--radius);
+  border: 1px solid var(--border); padding: 20px 22px;
+  box-shadow: var(--shadow-sm);
+}
+.st-stat-label { font-size: 13px; color: var(--text-sub); margin-bottom: 10px; }
+.st-stat-value { font-size: 38px; font-weight: 900; line-height: 1; }
+.st-stat-value--navy  { color: var(--navy-mid); }
+.st-stat-value--green { color: var(--green); }
+.st-stat-value--red   { color: var(--red); }
+.st-stat-value--gold  { color: #d97706; }
+
+/* ── Card ── */
+.st-card {
+  background: var(--white); border-radius: var(--radius);
+  border: 1px solid var(--border); padding: 22px 24px;
+  box-shadow: var(--shadow-sm);
+}
+.st-section-title { font-size: 15px; font-weight: 800; color: var(--text); margin-bottom: 20px; }
+
+/* ── Bar chart ── */
+.st-bars { display: flex; flex-direction: column; gap: 18px; }
+.st-bar-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 8px;
+}
+.st-bar-label { font-size: 13.5px; color: var(--text); }
+.st-bar-count { font-size: 13.5px; font-weight: 700; color: var(--text); }
+.st-bar-track {
+  height: 10px; border-radius: 99px;
+  background: #e5e7eb; overflow: hidden;
+}
+.st-bar-fill {
+  height: 100%; border-radius: 99px;
+  transition: width 0.6s ease;
+}
+.st-bar-fill--navy { background: var(--navy-mid); }
+.st-bar-fill--gold { background: var(--gold); }
+
+/* ── Sessions ── */
+.st-sessions { display: flex; flex-direction: column; gap: 8px; }
+.st-session-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 16px; border-radius: 8px;
+  background: #f9fafb; border: 1px solid var(--border);
+  transition: background 0.12s;
+}
+.st-session-row:hover { background: #f1f5f9; }
+.st-session-label    { font-size: 14px; font-weight: 700; color: var(--text); }
+.st-session-sub      { font-size: 12.5px; color: var(--text-sub); margin-top: 2px; }
+.st-session-right    { text-align: right; }
+.st-session-approved { font-size: 13.5px; font-weight: 700; color: var(--green); }
+.st-session-rejected { font-size: 12.5px; color: var(--text-sub); margin-top: 2px; }
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .st-body { padding: 22px 26px 38px; }
+  .st-header { padding: 0 26px; }
+  .st-header-title { font-size: 17px; }
+  .st-stats { gap: 12px; }
+  .st-stat-card { padding: 18px 20px; }
+  .st-stat-label { font-size: 12px; margin-bottom: 8px; }
+  .st-stat-value { font-size: 36px; }
+  .st-card { padding: 20px 22px; }
+  .st-section-title { font-size: 14px; margin-bottom: 18px; }
+  .st-bars { gap: 16px; }
+  .st-bar-label { font-size: 12.5px; }
+  .st-bar-count { font-size: 12.5px; }
+  .st-sessions { gap: 6px; }
+  .st-session-row { padding: 12px 14px; }
+  .st-session-label { font-size: 13px; }
+  .st-session-sub { font-size: 12px; }
+}
+
+@media (max-width: 900px) {
+  .st-body { padding: 20px 24px 36px; }
+  .st-header { padding: 0 20px; }
+  .st-header-title { font-size: 16px; }
+  .st-stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .st-stat-card { padding: 16px 18px; }
+  .st-stat-label { font-size: 11.5px; margin-bottom: 6px; }
+  .st-stat-value { font-size: 34px; }
+  .st-card { padding: 18px 20px; }
+  .st-section-title { font-size: 13px; margin-bottom: 16px; }
+  .st-bars { gap: 14px; }
+  .st-bar-label { font-size: 12px; }
+  .st-bar-count { font-size: 12px; }
+  .st-sessions { gap: 4px; }
+  .st-session-row { padding: 10px 12px; }
+  .st-session-label { font-size: 12px; }
+  .st-session-sub { font-size: 11.5px; }
+}
+
+@media (max-width: 768px) {
+  .st-body { padding: 18px 20px 32px; }
+  .st-header { padding: 0 16px; }
+  .st-header-title { font-size: 15px; }
+  .st-stats { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .st-stat-card { padding: 14px 16px; }
+  .st-stat-label { font-size: 11px; margin-bottom: 4px; }
+  .st-stat-value { font-size: 32px; }
+  .st-card { padding: 16px 18px; }
+  .st-section-title { font-size: 12px; margin-bottom: 14px; }
+  .st-bars { gap: 12px; }
+  .st-bar-label { font-size: 11px; }
+  .st-bar-count { font-size: 11px; }
+  .st-sessions { gap: 2px; }
+  .st-session-row { padding: 8px 10px; }
+  .st-session-label { font-size: 11px; }
+  .st-session-sub { font-size: 11px; }
+}
+
+@media (max-width: 600px) {
+  .st-body { padding: 16px 18px 28px; }
+  .st-header { padding: 0 12px; }
+  .st-header-title { font-size: 14px; }
+  .st-stats { grid-template-columns: 1fr; gap: 6px; }
+  .st-stat-card { padding: 12px 14px; }
+  .st-stat-label { font-size: 10px; margin-bottom: 2px; }
+  .st-stat-value { font-size: 28px; }
+  .st-card { padding: 14px 16px; }
+  .st-section-title { font-size: 11px; margin-bottom: 12px; }
+  .st-bars { gap: 10px; }
+  .st-bar-label { font-size: 10px; }
+  .st-bar-count { font-size: 10px; }
+  .st-sessions { gap: 0px; }
+  .st-session-row { padding: 6px 8px; }
+  .st-session-label { font-size: 10px; }
+  .st-session-sub { font-size: 10px; }
+}
+
+@media (max-width: 400px) {
+  .st-body { padding: 14px 16px 24px; }
+  .st-header { padding: 0 10px; }
+  .st-header-title { font-size: 13px; }
+  .st-stats { grid-template-columns: 1fr; gap: 4px; }
+  .st-stat-card { padding: 10px 12px; }
+  .st-stat-label { font-size: 9px; margin-bottom: 0px; }
+  .st-stat-value { font-size: 24px; }
+  .st-card { padding: 12px 14px; }
+  .st-section-title { font-size: 10px; margin-bottom: 10px; }
+  .st-bars { gap: 8px; }
+  .st-bar-label { font-size: 9px; }
+  .st-bar-count { font-size: 9px; }
+  .st-sessions { gap: 0px; }
+  .st-session-row { padding: 4px 6px; }
+  .st-session-label { font-size: 9px; }
+  .st-session-sub { font-size: 9px; }
+}

@@ -1,0 +1,196 @@
+RESEARCH INTERNSHIP FUNDING MANAGEMENT PLATFORM
+Ministry of Higher Education and Scientific Research - Algeria
+Comprehensive Guide for Researchers and PhD Students
+First Edition - Academic Year 2024/2025
+ 
+================================================================================
+SECTION 1: PLATFORM OVERVIEW
+================================================================================
+ 
+The Research Internship Funding Management Platform is a digital platform launched
+by the Algerian Ministry of Higher Education and Scientific Research to simplify
+and modernize the procedures for submitting funding requests for scientific
+internships abroad and domestically. The platform allows researchers and PhD
+students to submit their applications electronically and track their status at
+all stages of processing.
+ 
+Platform Objectives:
+- Digitize funding application procedures for scientific internships
+- Reduce file processing time from 3 months to 3 weeks
+- Ensure transparency and equality in grant distribution
+- Enable university institutions to follow up on their researchers files
+- Archive and preserve all documents and correspondence electronically
+ 
+================================================================================
+SECTION 2: TYPES OF FUNDED INTERNSHIPS
+================================================================================
+ 
+1. Scientific Internships Abroad (Court Sejour)
+Duration: 1 to 6 months
+Target: PhD students and researcher professors wishing to conduct research
+in specialized laboratories at partner foreign universities.
+Grant includes: round trip flight ticket, accommodation, health insurance,
+and a monthly grant of 1,200 euros.
+ 
+2. Domestic Scientific Internships
+Target: Researchers wishing to conduct internships in other national
+laboratories outside their original institution.
+Duration: 1 week to 2 months.
+Covers: transportation and accommodation costs at a rate of 3,000
+Algerian dinars per day.
+ 
+3. Participation in International Conferences and Symposiums
+Support for researchers participating in internationally ranked scientific
+conferences. The researcher must have an accepted scientific paper at the
+conference. The grant covers registration fees, travel and accommodation.
+ 
+================================================================================
+SECTION 3: ELIGIBILITY CONDITIONS
+================================================================================
+ 
+General Conditions for Applicants:
+- Must be enrolled in a PhD program or hold the rank of lecturer or above
+- Must not have benefited from the same type of grant in the last 2 years
+- Must obtain approval from the original institution and scientific supervisor
+- Must have an official invitation from the host institution (for abroad internships)
+- Must be in good administrative standing
+- Age must not exceed 45 years for abroad internships
+ 
+Special Conditions for PhD Students:
+- Must have completed at least the first year of PhD
+- Must obtain a positive report from the PhD follow-up committee
+- Must submit a clear research plan showing the benefit of the internship
+ 
+================================================================================
+SECTION 4: REQUIRED DOCUMENTS
+================================================================================
+ 
+Essential Administrative Documents:
+1. Electronic application form filled via the platform
+2. Copy of valid national identity card
+3. Work certificate or PhD enrollment certificate
+4. Academic CV in French or English
+5. List of scientific publications if any
+6. Approval from head of original institution, signed and stamped
+7. Approval from scientific supervisor
+ 
+Technical and Scientific Documents:
+1. Research protocol to be executed during the internship
+2. Official invitation from host laboratory or university
+3. Detailed description of internship program and scientific content
+4. Recommendation letter from laboratory director or research team
+ 
+Additional Documents for Abroad Internships:
+1. Valid passport (minimum 6 months validity after return date)
+2. International health insurance document
+3. Language proficiency certificate for host country language if required
+ 
+================================================================================
+SECTION 5: APPLICATION PROCEDURE
+================================================================================
+ 
+Step 1 - Create Account:
+Visit the electronic platform and create your account using your institutional
+email. You will receive an activation email within 24 hours.
+ 
+Step 2 - Choose Application Type:
+After logging in, choose the appropriate internship type (abroad, domestic,
+or international conference) and verify that you meet the eligibility conditions.
+ 
+Step 3 - Upload Documents:
+Upload all required documents in PDF format. Maximum file size per document
+is 5 megabytes. Ensure that scanned documents are clear and legible.
+ 
+Step 4 - Review File:
+Review your complete file before submission. After submission, documents
+cannot be modified unless a correction is requested by the committee.
+ 
+Step 5 - Follow Up:
+You can track your file status in real time via your personal dashboard.
+You will receive email notifications at every update to your file status.
+ 
+================================================================================
+SECTION 6: DEADLINES AND SESSIONS
+================================================================================
+ 
+Applications open four times per year according to the following schedule:
+ 
+Session 1 (January):   Deadline January 31    - Results announced March 15    - Summer internships
+Session 2 (April):     Deadline April 30       - Results announced June 15     - Autumn internships
+Session 3 (July):      Deadline July 31        - Results announced September 15 - Winter internships
+Session 4 (October):   Deadline October 31    - Results announced December 15  - Spring internships
+ 
+Important note: Submitting a file after the specified deadline will not be
+accepted under any circumstances. Study periods range from 2 to 3 weeks
+from the date of closing applications.
+ 
+================================================================================
+SECTION 7: FUNDING AMOUNTS
+================================================================================
+ 
+Round trip flight ticket:         Up to 150,000 DZD (depending on destination)
+Monthly grant (abroad):           1,200 euros per month
+Daily accommodation allowance (domestic): 3,000 DZD per day
+Conference registration fees:    Up to 50,000 DZD for the entire internship
+Health insurance:                 Fully covered
+ 
+================================================================================
+SECTION 8: POST-INTERNSHIP OBLIGATIONS
+================================================================================
+ 
+The funding beneficiary must submit the final internship report within a
+maximum of 30 days from the return date. The report must include:
+ 
+- Summary of completed work and achieved objectives
+- List of publications or scientific articles resulting from the internship
+- Internship completion certificate signed by the host institution
+- Copies of all financial invoices and receipts
+- Return of unspent amounts if any
+ 
+In case of failure to submit the final report on time, the Ministry has the
+right to recover the granted amounts and exclude the researcher from
+benefiting from any future funding for 3 years.
+ 
+================================================================================
+SECTION 9: FREQUENTLY ASKED QUESTIONS
+================================================================================
+ 
+Q: Can I submit two applications at the same time?
+A: No, you cannot submit more than one application in the same session.
+You must wait for the result of the first application before submitting a new one.
+ 
+Q: What happens if my file is rejected?
+A: In case of rejection, you will receive a notification with the reasons,
+and you have the right to reapply in the next session after correcting
+the mentioned deficiencies.
+ 
+Q: Can the internship duration be extended?
+A: A maximum one-month extension can be requested for abroad internships,
+provided scientific justifications and supervisor approval are submitted.
+The extension request must be submitted at least 15 days before the
+original end date.
+ 
+Q: Does the funding cover family members?
+A: No, the funding covers the researcher only, not family members.
+ 
+Q: How is the grant paid?
+A: The grant is paid via bank transfer directly to the researcher account.
+You must provide the platform with your international bank account number
+(IBAN) at least 2 weeks before the internship start date.
+ 
+Q: What languages are accepted for file documents?
+A: Documents are accepted in Arabic, French and English only.
+Documents written in other languages must be translated and authenticated.
+ 
+================================================================================
+SECTION 10: CONTACT AND SUPPORT
+================================================================================
+ 
+To contact the platform support team:
+ 
+Email:    support.tarbas@mesrs.dz
+Phone:    021-XX-XX-XX (working days from 8:00 to 16:00)
+Address:  11 Didouche Mourad Street, Algiers
+Reception hours: Sunday to Thursday from 9:00 to 12:00
+ 
+Ministry of Higher Education and Scientific Research - Algeria - 2024

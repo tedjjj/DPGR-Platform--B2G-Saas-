@@ -1,0 +1,459 @@
+/* ── Detail Demande Page ── */
+
+.dd-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Back button ── */
+.dd-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+  width: fit-content;
+}
+.dd-back-btn:hover { color: #1A3A6B; }
+
+/* ── Hero card ── */
+.dd-hero {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.dd-hero-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.dd-avatar {
+  width: 52px;
+  height: 52px;
+  background: #1e3a5f;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.dd-hero-name {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+.dd-hero-role {
+  font-size: 0.83rem;
+  color: var(--text-light);
+  line-height: 1.4;
+}
+
+.dd-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.dd-status-badge {
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.dd-icon-btn {
+  background: #f8f9fb;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-light);
+  transition: all 0.18s;
+}
+.dd-icon-btn:hover {
+  border-color: #1A3A6B;
+  color: #1A3A6B;
+  background: #eef2ff;
+}
+
+.dd-attestation-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--gold, #b5953b);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 18px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+.dd-attestation-btn:hover { opacity: 0.88; }
+
+/* ── Stepper card ── */
+.dd-stepper-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 32px;
+}
+
+.dd-stepper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow-x: none;
+}
+
+.dd-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.dd-step-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.dd-step-dot.done    { background: #1A3A6B; }
+.dd-step-dot.current { background: var(--gold, #b5953b); border: 3px solid #fff; box-shadow: 0 0 0 2px var(--gold, #b5953b); }
+.dd-step-dot.pending { background: #d1d5db; }
+
+.dd-step-label {
+  font-size: 0.72rem;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+.dd-step-label.current {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.dd-step-line {
+  flex: 1;
+  height: 3px;
+  min-width: 24px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+.dd-step-line.done    { background: #1A3A6B; }
+.dd-step-line.half    { background: linear-gradient(to right, #1A3A6B 50%, #d1d5db 50%); }
+.dd-step-line.pending { background: #d1d5db; }
+
+/* ── Body grid ── */
+.dd-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.dd-col-left,
+.dd-col-mid,
+.dd-col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── Card ── */
+.dd-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.dd-card-full { height: 100%; }
+
+.dd-card-title {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.dd-divider {
+  height: 2px;
+  background: var(--gold, #b5953b);
+  width: 32px;
+  border-radius: 2px;
+  margin-bottom: 18px;
+}
+
+/* ── Info list ── */
+.dd-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dd-info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dd-info-label {
+  font-size: 0.73rem;
+  color: var(--text-light);
+  font-weight: 400;
+}
+
+.dd-info-value {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ── Objectifs ── */
+.dd-objectifs {
+  font-size: 0.84rem;
+  color: var(--text-light);
+  line-height: 1.65;
+}
+
+/* ── Documents ── */
+.dd-docs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.dd-doc-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #f8f9fb;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.dd-doc-icon { color: var(--text-light); flex-shrink: 0; }
+
+.dd-doc-name {
+  flex: 1;
+  font-size: 0.84rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.dd-doc-check { flex-shrink: 0; }
+
+.dd-valider-btn {
+  width: 100%;
+  background: #1A3A6B;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.dd-valider-btn:hover { background: #152d5a; }
+
+/* ── Historique ── */
+.dd-historique {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dd-hist-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.dd-hist-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.dd-hist-dot.navy { background: #1A3A6B; }
+.dd-hist-dot.gold { background: var(--gold, #b5953b); }
+
+.dd-hist-label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.dd-hist-who {
+  font-size: 0.76rem;
+  color: var(--text-light);
+  margin-bottom: 2px;
+}
+
+.dd-hist-date {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.73rem;
+  color: var(--text-light);
+}
+
+/* ── Actions rapides card ── */
+.dd-actions-card {
+  background: #1A3A6B;
+  border-color: #1A3A6B;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dd-card-title-white {
+  color: #fff;
+}
+
+.dd-action-btn {
+  background: rgba(255,255,255,0.12);
+  border: none;
+  border-radius: 10px;
+  padding: 11px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.18s;
+}
+.dd-action-btn:hover { background: rgba(255,255,255,0.22); }
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .dd-page { gap: 18px; }
+  .dd-hero { padding: 22px 26px; }
+  .dd-stepper-card { padding: 22px 28px; }
+  .dd-card { padding: 20px; }
+  .dd-body { grid-template-columns: 1fr 1fr; }
+  .dd-col-right { grid-column: 1 / -1; flex-direction: row; }
+  .dd-hero-name { font-size: 1.3rem; }
+  .dd-card-title { font-size: 0.94rem; }
+}
+
+@media (max-width: 900px) {
+  .dd-page { gap: 16px; }
+  .dd-hero { padding: 20px 24px; }
+  .dd-stepper-card { padding: 20px 24px; }
+  .dd-card { padding: 18px; }
+  .dd-body { grid-template-columns: 1fr; }
+  .dd-col-right { flex-direction: column; }
+  .dd-hero-name { font-size: 1.25rem; }
+  .dd-hero-role { font-size: 0.8rem; }
+  .dd-card-title { font-size: 0.92rem; }
+  .dd-info-label { font-size: 0.7rem; }
+  .dd-info-value { font-size: 0.85rem; }
+}
+
+@media (max-width: 768px) {
+  .dd-page { gap: 14px; }
+  .dd-hero { 
+    flex-direction: column; 
+    align-items: flex-start; 
+    padding: 18px 20px; 
+  }
+  .dd-stepper-card { padding: 18px 20px; }
+  .dd-card { padding: 16px 18px; }
+  .dd-body { grid-template-columns: 1fr; }
+  .dd-col-right { flex-direction: column; }
+  .dd-hero-name { font-size: 1.2rem; }
+  .dd-hero-role { font-size: 0.78rem; }
+  .dd-card-title { font-size: 0.9rem; }
+  .dd-info-label { font-size: 0.68rem; }
+  .dd-info-value { font-size: 0.82rem; }
+  .dd-avatar { width: 48px; height: 48px; font-size: 0.85rem; }
+  .dd-status-badge { padding: 5px 14px; font-size: 0.74rem; }
+  .dd-attestation-btn { padding: 8px 16px; font-size: 0.8rem; }
+  .dd-valider-btn { padding: 10px; font-size: 0.84rem; }
+}
+
+@media (max-width: 600px) {
+  .dd-page { gap: 12px; }
+  .dd-hero { padding: 16px 18px; }
+  .dd-stepper-card { padding: 16px 18px; }
+  .dd-card { padding: 14px 16px; }
+  .dd-body { grid-template-columns: 1fr; }
+  .dd-col-right { flex-direction: column; }
+  .dd-hero-name { font-size: 1.15rem; }
+  .dd-hero-role { font-size: 0.75rem; }
+  .dd-card-title { font-size: 0.88rem; }
+  .dd-info-label { font-size: 0.65rem; }
+  .dd-info-value { font-size: 0.8rem; }
+  .dd-avatar { width: 44px; height: 44px; font-size: 0.8rem; }
+  .dd-status-badge { padding: 4px 12px; font-size: 0.7rem; }
+  .dd-attestation-btn { padding: 7px 14px; font-size: 0.76rem; }
+  .dd-valider-btn { padding: 9px; font-size: 0.8rem; }
+  .dd-action-btn { padding: 9px 14px; font-size: 0.8rem; }
+  .dd-objectifs { font-size: 0.8rem; }
+  .dd-doc-row { padding: 8px 12px; }
+  .dd-doc-name { font-size: 0.8rem; }
+}
+
+@media (max-width: 400px) {
+  .dd-page { gap: 10px; }
+  .dd-hero { padding: 14px 16px; }
+  .dd-stepper-card { padding: 14px 16px; }
+  .dd-card { padding: 12px 14px; }
+  .dd-body { grid-template-columns: 1fr; }
+  .dd-col-right { flex-direction: column; }
+  .dd-hero-name { font-size: 1.1rem; }
+  .dd-hero-role { font-size: 0.72rem; }
+  .dd-card-title { font-size: 0.85rem; }
+  .dd-info-label { font-size: 0.62rem; }
+  .dd-info-value { font-size: 0.78rem; }
+  .dd-avatar { width: 40px; height: 40px; font-size: 0.75rem; }
+  .dd-status-badge { padding: 3px 10px; font-size: 0.66rem; }
+  .dd-attestation-btn { padding: 6px 12px; font-size: 0.72rem; }
+  .dd-valider-btn { padding: 8px; font-size: 0.76rem; }
+  .dd-action-btn { padding: 8px 12px; font-size: 0.76rem; }
+  .dd-objectifs { font-size: 0.76rem; }
+  .dd-doc-row { padding: 6px 10px; }
+  .dd-doc-name { font-size: 0.76rem; }
+}

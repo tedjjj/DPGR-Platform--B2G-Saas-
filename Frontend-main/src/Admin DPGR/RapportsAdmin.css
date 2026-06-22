@@ -1,0 +1,105 @@
+.rapports-page {
+    padding: 25px;
+    background-color: #f0f2f5;
+}
+
+.rapports-header h2 {
+    color: #1A3A6B;
+    border-left: 5px solid #C9A84C;
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+
+.card-status {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.type-badge {
+    background: #1A3A6B;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+.status-text {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.status-text.cloturee { color: #28a745; }
+.status-text.approuvee { color: #C9A84C; }
+
+.card-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 5px 0;
+}
+
+.btn-examine {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #1A3A6B;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-examine:hover {
+    background-color: #C9A84C;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .rapports-page { padding: 23px; }
+  .rapports-header h2 { font-size: 1.15rem; padding-left: 14px; margin-bottom: 28px; }
+  .card-status { margin-bottom: 13px; }
+  .type-badge { padding: 2.5px 7px; font-size: 0.7rem; }
+  .status-text { font-size: 0.75rem; }
+  .card-meta { font-size: 0.85rem; margin: 4px 0; }
+  .btn-examine { padding: 9px; font-size: 0.78rem; }
+}
+
+@media (max-width: 900px) {
+  .rapports-page { padding: 20px; }
+  .rapports-header h2 { font-size: 1.1rem; padding-left: 12px; margin-bottom: 26px; }
+  .card-status { margin-bottom: 12px; }
+  .type-badge { padding: 2px 6px; font-size: 0.65rem; }
+  .status-text { font-size: 0.7rem; }
+  .card-meta { font-size: 0.8rem; margin: 3px 0; }
+  .btn-examine { padding: 8px; font-size: 0.72rem; }
+}
+
+@media (max-width: 768px) {
+  .rapports-page { padding: 18px; }
+  .rapports-header h2 { font-size: 1rem; padding-left: 10px; margin-bottom: 24px; }
+  .card-status { margin-bottom: 10px; }
+  .type-badge { padding: 2px 5px; font-size: 0.6rem; }
+  .status-text { font-size: 0.65rem; }
+  .card-meta { font-size: 0.75rem; margin: 2px 0; }
+  .btn-examine { padding: 7px; font-size: 0.65rem; }
+}
+
+@media (max-width: 600px) {
+  .rapports-page { padding: 16px; }
+  .rapports-header h2 { font-size: 0.95rem; padding-left: 8px; margin-bottom: 22px; }
+  .card-status { margin-bottom: 8px; }
+  .type-badge { padding: 1.5px 4px; font-size: 0.55rem; }
+  .status-text { font-size: 0.6rem; }
+  .card-meta { font-size: 0.7rem; margin: 1px 0; }
+  .btn-examine { padding: 6px; font-size: 0.58rem; }
+}
+
+@media (max-width: 400px) {
+  .rapports-page { padding: 14px; }
+  .rapports-header h2 { font-size: 0.9rem; padding-left: 6px; margin-bottom: 20px; }
+  .card-status { margin-bottom: 6px; }
+  .type-badge { padding: 1px 3px; font-size: 0.5rem; }
+  .status-text { font-size: 0.55rem; }
+  .card-meta { font-size: 0.65rem; margin: 0px; }
+  .btn-examine { padding: 5px; font-size: 0.5rem; }
+}

@@ -1,0 +1,440 @@
+/* ═══════════════════════════════════
+   SHARED SECURITY PAGES STYLES
+   ═══════════════════════════════════ */
+
+.sec-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 620px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ── Back button ── */
+.sec-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+  width: fit-content;
+}
+.sec-back-btn:hover { color: #1A3A6B; }
+
+/* ── Main card ── */
+.sec-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Page header ── */
+.sec-page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+.sec-page-icon {
+  width: 62px;
+  height: 62px;
+  background: #1A3A6B;
+  color: #fff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.sec-page-icon-shield {
+  background: #1A3A6B;
+}
+
+.sec-page-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.sec-page-sub {
+  font-size: 0.83rem;
+  color: var(--text-light);
+}
+
+/* ═══════════════════════════════════
+   CHANGER MOT DE PASSE
+   ═══════════════════════════════════ */
+
+.sec-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ── Field ── */
+.sec-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sec-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.sec-required { color: #ef4444; }
+
+.sec-input-wrap {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.sec-input-wrap:focus-within {
+  border-color: #1A3A6B;
+  box-shadow: 0 0 0 3px rgba(26, 58, 107, 0.08);
+}
+
+.sec-input-icon {
+  padding: 0 12px;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.sec-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  color: var(--text);
+  padding: 12px 0;
+  background: transparent;
+}
+
+.sec-input::placeholder { color: var(--text-light); }
+
+.sec-eye-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 12px;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+.sec-eye-btn:hover { color: #1A3A6B; }
+
+.sec-hint {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* ── Strength bar ── */
+.sec-strength {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sec-strength-bars {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+}
+
+.sec-strength-bar {
+  height: 5px;
+  flex: 1;
+  border-radius: 999px;
+  transition: background 0.3s;
+}
+
+.sec-strength-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  min-width: 68px;
+  text-align: right;
+}
+
+/* ── Logout all checkbox ── */
+.sec-logout-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #eef2ff;
+  border-radius: 10px;
+  padding: 14px 16px;
+  border: 1px solid #c7d2fe;
+}
+
+.sec-checkbox {
+  width: 17px;
+  height: 17px;
+  margin-top: 2px;
+  accent-color: #1A3A6B;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.sec-logout-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.sec-logout-sub {
+  font-size: 0.76rem;
+  color: var(--text-light);
+}
+
+/* ── Error / success ── */
+.sec-error   { font-size: 0.82rem; color: #ef4444; font-weight: 500; margin: 0; }
+.sec-success { font-size: 0.82rem; color: #16a34a; font-weight: 600; margin: 0; }
+
+/* ── Actions ── */
+.sec-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.sec-cancel-btn {
+  flex: 1;
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.sec-cancel-btn:hover { border-color: #1A3A6B; }
+
+.sec-submit-btn {
+  flex: 1;
+  background: #1A3A6B;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.sec-submit-btn:hover { background: #152d5a; }
+
+/* ═══════════════════════════════════
+   SESSIONS ACTIVES
+   ═══════════════════════════════════ */
+
+.sess-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sess-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sess-section-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sess-section-check {
+  width: 30px;
+  height: 30px;
+  background: #22c55e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.sess-section-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.sess-section-sub {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-top: 2px;
+}
+
+/* ── Session card ── */
+.sess-card {
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: #fff;
+  transition: box-shadow 0.2s;
+}
+
+.sess-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+
+.sess-card.current {
+  border-color: #22c55e;
+  background: #f0fdf4;
+}
+
+.sess-card-icon {
+  color: #6b7280;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.sess-card.current .sess-card-icon { color: #1A3A6B; }
+
+.sess-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.sess-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.sess-device {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.sess-current-badge {
+  background: #22c55e;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.sess-disconnect-btn {
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #ef4444;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.2s;
+}
+.sess-disconnect-btn:hover { opacity: 0.7; }
+
+/* ── Session meta ── */
+.sess-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.sess-meta-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  color: var(--text-light);
+}
+
+.sess-meta-item svg { margin-top: 1px; flex-shrink: 0; }
+
+.sess-meta-label {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-light);
+  margin-bottom: 1px;
+}
+
+.sess-meta-val {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ── Disconnect all ── */
+.sess-disconnect-all-btn {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.sess-disconnect-all-btn:hover { background: #dc2626; }
+
+.sess-other-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sess-empty {
+  text-align: center;
+  padding: 24px;
+  color: var(--text-light);
+  font-size: 0.88rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .sec-card { padding: 24px 18px; }
+  .sec-actions { flex-direction: column; }
+  .sess-meta { gap: 12px; }
+}
